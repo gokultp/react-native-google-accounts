@@ -25,7 +25,7 @@ public class RNGoogleAccountsModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void isAvailable(final Promise promise) {
+    public void getAccountEmail(final Promise promise) {
         try {
             AccountManager manager = AccountManager.get(this);
             Account[] accounts = manager.getAccountsByType("com.google");
