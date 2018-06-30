@@ -29,7 +29,7 @@ public class RNGoogleAccountsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void getAccountEmail(final Promise promise) {
         try {
-            AccountManager manager = AccountManager.get(reactContext);
+            AccountManager manager = AccountManager.get(this);
             Account[] accounts = manager.getAccountsByType("com.google");
             List<String> possibleEmails = new LinkedList<String>();
 
@@ -42,8 +42,11 @@ public class RNGoogleAccountsModule extends ReactContextBaseJavaModule {
 
             if (!possibleEmails.isEmpty() && possibleEmails.get(0) != null) {
                 String email = possibleEmails.get(0);
-                promise.resolve(email);
-                
+                String[] parts = email.split("@");
+                if (parts.length > 0 && parts[0] != null)
+                    promise.resolve(parts[0);
+                else
+                    promise.resolve(null);
             } else
                  promise.resolve(null);        
         } catch (Exception ex) {
