@@ -42,7 +42,7 @@ RNGoogleAccounts.getAccountEmail().then(email=>{
 	console.log(email)
 });
 ```
-[npm-image]: https://www.npmjs.com/package/react-native-google-accounts.svg
+[npm-image]: https://img.shields.io/npm/v/react-native-google-accounts.svg
 [npm-url]: https://www.npmjs.com/package/react-native-google-accounts
 
   
