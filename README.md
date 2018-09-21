@@ -1,3 +1,4 @@
+[![NPM Version][npm-image]][npm-url]
 
 # react-native-google-accounts
 
@@ -41,4 +42,7 @@ RNGoogleAccounts.getAccountEmail().then(email=>{
 	console.log(email)
 });
 ```
+[npm-image]: https://www.npmjs.com/package/react-native-google-accounts.svg
+[npm-url]: https://www.npmjs.com/package/react-native-google-accounts
+
   
